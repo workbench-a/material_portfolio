@@ -1,24 +1,44 @@
-import logo from './logo.svg';
+import React, { Fragment } from 'react';
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from './components/ui/Theme';
+
 import './App.css';
+import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
+
+import Header from './components/ui/partials/Header';
+import Footer from './components/ui/partials/Footer';
+import SimpleCarousel from './components/ui/partials/SimpleCarousel';
+
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Timeline from './components/Timeline';
+import Projects from './components/Projects';
+import Papers from './components/ui/papers/Papers';
+import Research from './components/Research';
+import Notebook from './components/ui/notebooks/Notebook';
 
 function App() {
+  const reload = () => window.location.reload();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Fragment>
+        <BrowserRouter>
+          <Header position="fixed" color="primary"/>
+          <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route exact path='/about' component={About}/>
+          <Route exact path='/timeline' component={Timeline}/>
+          <Route exact path='/projects' component={Projects}/>
+          <Route exact path='/papers' component={Papers}/>
+          <Route exact path='/research' component={Research}/>
+          <Route exact path='/notebook' component={Notebook}/>
+          </Switch>
+          <Footer/>
+        </BrowserRouter>
+      </Fragment>
+    </ThemeProvider>
   );
 }
 
