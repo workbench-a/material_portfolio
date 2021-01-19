@@ -20,10 +20,10 @@ const useStyles = makeStyles((theme) => ({
     minWidth: "20rem",
     // backgroundColor: "red", //troubleshooting
     margin: 0,
-    padding: 20,
-    [theme.breakpoints.down("xs")]: {
-      backgroundColor: "blue",
-    },
+    padding: 5,
+    // [theme.breakpoints.down("xs")]: {
+    //   backgroundColor: "blue",
+    // },
   },
   gridItemContainer: {
     // backgroundColor: "brown", //troubleshooting
@@ -45,12 +45,16 @@ const useStyles = makeStyles((theme) => ({
   },
   spacerBot: {
     flexGrow: 1,
-    marginTop: "25rem",
+    marginTop: "18rem",
     border: 0,
   },
   image: {
-    marginBottom: "1rem",
-  }
+    marginBottom: "0.8rem",
+  },
+  subtitle: {
+    fontStyle: "italic",
+    color: theme.palette.primary.main,
+  },
 }));
 
 export default function Section(props) {
@@ -80,11 +84,11 @@ export default function Section(props) {
             {/* <div>The Title</div> */}
         </Grid>
     <Grid item>
-    <Typography gutterBottom variant="h4" component="h2">
+    {/* <Typography gutterBottom variant="h4" component="h2">
         About Me
-      </Typography>
-      <Typography gutterBottom variant="h6" component="h2">
-      "We are what we repeatedly do."
+      </Typography> */}
+      <Typography  className={classes.subtitle} gutterBottom variant="h6" component="h2">
+      "You are what you repeatedly do."
       </Typography>
       {/* <Typography Wrap variant="body2" color="textPrimary" component="p" justifyContent="center">
         I like to understand how things work, so I can make better things and make things better.

@@ -61,10 +61,10 @@ export default function Section(props) {
           <Grid item container direction="column" align="center">
             <Grid item>
             <Typography gutterBottom variant="h4" component="h2">
-              Curriculum, Theory, Research
+              The Machine Learning and Software Bootcamp
             </Typography>
             <Typography gutterBottom variant="h6" component="h2">
-            An Open Source Bootloader for Graduate Studies in ML
+              A Program for Self-Starters
             </Typography>
             <Typography Wrap variant="body2" color="textPrimary" component="p" justifyContent="center">
             </Typography>

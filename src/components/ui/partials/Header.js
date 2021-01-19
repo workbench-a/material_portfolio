@@ -188,23 +188,23 @@ export default function Header(props) {
               component={Link} 
               to="/about" 
             />
-            <Tab 
+            {/* <Tab 
               className={classes.tab} 
               disableRipple
               label="Timeline" 
               component={Link} 
               to="/timeline" 
-            />
-            <Tab 
+            /> */}
+            {/* <Tab 
               className={classes.tab} 
               disableRipple
               label="Category" 
               aria-controls="simple-menu" 
               aria-haspopup="true" 
               onMouseOver={handleClick} 
-            />
+            /> */}
           </Tabs>
-          <Menu 
+          {/* <Menu 
             classes={{paper: classes.menu}}
             id="simple-menu"
             anchorEl={anchorEl}
@@ -214,7 +214,7 @@ export default function Header(props) {
             MenuListProps={{onMouseLeave: handleClose}}
             elevation={0}
           >
-            {/* <MenuItem >Select One ...</MenuItem> */}
+            <MenuItem >Select One ...</MenuItem>
             {menuOptions.map((option, i) => (
               <MenuItem 
                 key = {option}
@@ -225,26 +225,26 @@ export default function Header(props) {
               >{option.name}
               </MenuItem>
             ))}
-          </Menu>
+          </Menu> */}
     </Fragment>
   )
 
-  const drawer = (
-    <Fragment>
-      < SwipeableDrawer 
-        disableBackdropTransition={!iOS} 
-        disableDiscovery={iOS} 
-        open={openDrawer} 
-        onClose={() => setOpenDrawer(false)} 
-        onOpen={() => setOpenDrawer(true)}
-      >
-        Example Drawer
-      </ SwipeableDrawer>
-      <IconButton className={classes.drawerIconContainer} onClick={() => setOpenDrawer(!openDrawer)} disableRipple>
-        <MenuIcon className={classes.drawerIcon}/>
-      </IconButton>
-    </Fragment>
-  )
+  // const drawer = (
+  //   <Fragment>
+  //     < SwipeableDrawer 
+  //       disableBackdropTransition={!iOS} 
+  //       disableDiscovery={iOS} 
+  //       open={openDrawer} 
+  //       onClose={() => setOpenDrawer(false)} 
+  //       onOpen={() => setOpenDrawer(true)}
+  //     >
+  //       Example Drawer
+  //     </ SwipeableDrawer>
+  //     <IconButton className={classes.drawerIconContainer} onClick={() => setOpenDrawer(!openDrawer)} disableRipple>
+  //       <MenuIcon className={classes.drawerIcon}/>
+  //     </IconButton>
+  //   </Fragment>
+  // )
   return (
     <React.Fragment>
       <ElevationScroll {...props}>

@@ -58,9 +58,9 @@ const useStyles = makeStyles((theme) => ({
 export default function About() {
   const items = [
     {
-      title: "Tired of Tired Resumes?",
+      title: `More \"Lab Notebook\" than Portfolio ...`,
       // subtitle: "Apps | Case Studies | Pipelines",
-      description: "This project is my take on reinventing the resume. Sure, it's a portfolio website, but it's one with some pretty cool features. Not only does it include a variety of work samples accross core subjects and technologies, but it also includes a learning timeline for anyone interested in boostrapping their way to a graduate level understanding of machine learning research. Given the scope and nature of the work, I like to think of this platform as laboratory (notebook) in the cloud.",
+      description: "This project is a realtime lab notebook. It is an augmented portfolio which highlights projects and code samples, while providing insights into work-ethic, work flow, and self directed technical development in machine learning research and software engineering. Please see links below.",
       imgUrl: "https://firebasestorage.googleapis.com/v0/b/portfolio-b992f.appspot.com/o/montage_lg.jpg?alt=media&token=9aba98de-059c-4aec-9fb1-8dd438202cf7",
     },
     // {

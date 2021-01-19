@@ -42,8 +42,8 @@ export default function Papers() {
   const theme = useTheme();
 
   const header = {
-    title: "Publications with Code",
-    subtitle: "A selection of implementations of or experiments with existing research.",
+    title: "Papers and Implementations",
+    subtitle: "\"Experiments with existing research.\"",
     description: "",
   }
 

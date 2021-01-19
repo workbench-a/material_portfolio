@@ -106,7 +106,7 @@ export default function TimelineSection(props) {
               <Grid className={classes.buttonContainer} container item direction="row" align="start" justify="center">
               {/* <Grid item><Link to={detailsLink}><Button variant="outlined" style={{"color": iconColor, "borderColor": iconColor}}>View Calendar</Button></Link></Grid> */}
               {/* <Grid item><a href={gitHubUrl}><TodayIcon style={{"color": iconColor}}/></a></Grid> */}
-              <Grid item><a href={gitHubUrl}><Button variant="outlined" style={{"color": iconColor, "borderColor": iconColor}}>View Live Calendar</Button></a></Grid>
+              <Grid item><a href={"https://calendar.google.com/calendar/embed?src=cn87olkrll6lgkl9k97a30q2m8%40group.calendar.google.com&ctz=America%2FNew_York"}><Button variant="outlined" style={{"color": iconColor, "borderColor": iconColor}}>View Live Calendar</Button></a></Grid>
               </Grid>
             {/* </Grid> */}
           </Grid>

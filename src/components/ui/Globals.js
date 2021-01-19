@@ -1,0 +1,6 @@
+export const cvLink = "https://firebasestorage.googleapis.com/v0/b/portfolio-b992f.appspot.com/o/twitter_logo.png?alt=media&token=8224dd8c-f7c0-406f-9107-aecbc41e052b"
+export const gitHubLink = "https://github.com/AlephTaw"
+export const wikiLink = "https://www.google.com"
+export const calendarLink = "https://calendar.google.com/calendar/embed?src=cn87olkrll6lgkl9k97a30q2m8%40group.calendar.google.com&ctz=America%2FNew_York"
+export const bootcampLink = "https://github.com/AlephTaw/the-open-data-science-bootcamp"
+export const linkedInLink = "www.linkedin.com/in/steven-wilcox-0002"

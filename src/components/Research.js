@@ -33,24 +33,6 @@ export default function Research() {
       description: "",
       imgUrl: "https://firebasestorage.googleapis.com/v0/b/portfolio-b992f.appspot.com/o/paper_lg.png?alt=media&token=77a46031-7970-48a2-8926-9dbba06d8c78",
     },
-    // {
-    //   title: "Curriculumn, Theory, and Research",
-    //   subtitle: "An Open Source Bootloader for Graduate Studies in ML",
-    //   description: "A running list of news blogs, comunities, researchers, conferences, events, and other research and industry related information pertaining to machine learning and artificial intelligence.",
-    //   imgUrl: "https://firebasestorage.googleapis.com/v0/b/portfolio-b992f.appspot.com/o/paper_lg.png?alt=media&token=77a46031-7970-48a2-8926-9dbba06d8c78",
-    // },
-    // {
-    //   title: "Projects",
-    //   subtitle: "Apps | Case Studies | Pipelines",
-    //   description: "A selection of machine learning and data science projects intended to showcase various pragmatic and creative applications of interest",
-    //   imgUrl: "https://firebasestorage.googleapis.com/v0/b/portfolio-b992f.appspot.com/o/paper_lg.png?alt=media&token=77a46031-7970-48a2-8926-9dbba06d8c78",
-    // },
-    // {
-    //   title: "Papers To Code",
-    //   subtitle: "NLP | Vision | Deep RL",
-    //   description: "The capacity to reproduce machine learning research is a critical skill for every research scientist. We consider a selections of works which replicate elements of modern research in artificial intelligence.",
-    //   imgUrl: "https://firebasestorage.googleapis.com/v0/b/portfolio-b992f.appspot.com/o/paper_lg.png?alt=media&token=77a46031-7970-48a2-8926-9dbba06d8c78",
-    // },
   ]
 
   return (

@@ -5,6 +5,7 @@ import { useTheme } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
+import Hidden from '@material-ui/core/Hidden';
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -73,7 +74,7 @@ export default function Section(props) {
   // console.log("matches: ", matches)
   // console.log("background Color passed as props", bgColor)
 
-  const { title, subtitle, description, imgUrl, gitHubUrl, detailsLink } = props.item
+  const { title, subtitle, description, imgUrl, gitHubUrl, detailsLink, buttonText, gitHubDisplay } = props.item
 
   return (
     <Box className={classes.section} style={{"backgroundColor": bgColor}} display="flex" justifyContent="center" alignItems="center">
@@ -101,8 +102,14 @@ export default function Section(props) {
                 {description}
               </Typography>
               <Grid className={classes.buttonContainer} container item direction="row" align="center" justify="space-between">
-              <Grid item><Link to={detailsLink} style={{"textDecoration": "none"}}><Button variant="outlined" style={{"color": iconColor, "borderColor": iconColor}}>Learn More</Button></Link></Grid>
-              <Grid item><a href={gitHubUrl}><GitHubIcon style={{"color": iconColor}}/></a></Grid>
+                  { gitHubDisplay ?
+                  <>
+                      <Grid item><Link to={detailsLink} style={{"textDecoration": "none"}}><Button variant="outlined" style={{"color": iconColor, "borderColor": iconColor}}>{buttonText}</Button></Link></Grid>
+                      <Grid><a href={gitHubUrl} style={{"textDecoration": "none"}}><GitHubIcon style={{"color": iconColor, fontSize: "2.25rem", padding: "0", margin: "0"}}/></a></Grid>
+                  </>
+                  :
+                  <Grid item><a href={detailsLink} style={{"textDecoration": "none"}}><Button variant="outlined" style={{"color": iconColor, "borderColor": iconColor}}>{buttonText}</Button></a></Grid>
+                  }
               </Grid>
             {/* </Grid> */}
           </Grid>

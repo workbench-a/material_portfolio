@@ -47,8 +47,11 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     marginTop: "10rem",
     border: 0,
-  }
- 
+  },
+  subtitle: {
+    fontStyle: "italic",
+    color: theme.palette.primary.main,
+  }, 
 }));
 
 export default function Section(props) {
@@ -78,7 +81,7 @@ export default function Section(props) {
           <Typography gutterBottom variant="h4" component="h2">
               {title}
             </Typography>
-            <Typography gutterBottom variant="h6" component="h2">
+            <Typography className={classes.subtitle} gutterBottom variant="h6" component="h2">
               {subtitle}
             </Typography>
             <Typography Wrap variant="body2" color="textPrimary" component="p" justifyContent="center">
