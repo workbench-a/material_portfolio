@@ -21,9 +21,9 @@ const useStyles = makeStyles((theme) => ({
     // backgroundColor: "red", //troubleshooting
     margin: 0,
     padding: 20,
-    [theme.breakpoints.down("xs")]: {
-      backgroundColor: "blue",
-    },
+    // [theme.breakpoints.down("xs")]: {
+    //   backgroundColor: "blue",
+    // },
   },
   gridItemContainer: {
     // backgroundColor: "brown", //troubleshooting

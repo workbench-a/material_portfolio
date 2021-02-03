@@ -17,7 +17,8 @@ import Timeline from './components/Timeline';
 import Projects from './components/Projects';
 import Papers from './components/ui/papers/Papers';
 import Research from './components/Research';
-import Notebook from './components/ui/notebooks/Notebook';
+import MarketAnalysis from './components/MarketAnalysis';
+// import Notebook from './components/ui/notebooks/Notebook';
 
 function App() {
   const reload = () => window.location.reload();
@@ -31,6 +32,7 @@ function App() {
           <Route exact path='/about' component={About}/>
           {/* <Route exact path='/timeline' component={Timeline}/> */}
           <Route exact path='/projects' component={Projects}/>
+          <Route exact path='/market-analysis' component={MarketAnalysis}/>
           {/* <Route exact path='/papers' component={Papers}/> */}
           {/* <Route exact path='/research' component={Research}/> */}
           {/* <Route exact path='/notebook' component={Notebook}/> */}

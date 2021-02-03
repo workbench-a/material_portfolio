@@ -58,9 +58,9 @@ const useStyles = makeStyles((theme) => ({
 export default function About() {
   const items = [
     {
-      title: `More \"Lab Notebook\" than Portfolio ...`,
+      title: `This is where I document my work ...`,
       // subtitle: "Apps | Case Studies | Pipelines",
-      description: "This project is a realtime lab notebook. It is an augmented portfolio which highlights projects and code samples, while providing insights into work-ethic, work flow, and self directed technical development in machine learning research and software engineering. Please see links below.",
+      description: "Thanks for checking out the site! This project is an augmented portfolio, highlighting projects and code samples, while documenting insights into work-ethic, work flow, and self directed technical development in machine learning research and software engineering. The live calendar chronicles these efforts in real-time. Please see links below.",
       imgUrl: "https://firebasestorage.googleapis.com/v0/b/portfolio-b992f.appspot.com/o/montage_lg.jpg?alt=media&token=9aba98de-059c-4aec-9fb1-8dd438202cf7",
     },
     // {

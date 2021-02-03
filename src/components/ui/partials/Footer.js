@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import { gitHubLink } from '../Globals';
 
 const useStyles = makeStyles((theme) => ({
   gridContainer: {
@@ -78,7 +79,7 @@ export default function Footer(props) {
         <Grid item>
           <Grid className={classes.gridItemContainer} container direction="row" align="center" justify="center">
             <Typography className={classes.footerText}>Ce n'est pas un pied de page.</Typography>
-            <GitHubIcon className={classes.icons}/>
+            <a href={gitHubLink}><GitHubIcon className={classes.icons}/></a>
           </Grid>
         </Grid>
       </Grid>
