@@ -187,8 +187,8 @@ export default function MarketAnalysis() {
         {/* <div>{value}</div> */}
         </Box>
         <Grid className={classes.buttonContainer2} container item direction="row" align="center" justify="center">
-                <Grid item className={classes.button2}><a href={linkedInLink}><LinkedInIcon style={{"fontSize": "4.55rem", "color": iconColor}}/></a></Grid>
-                <Grid item className={classes.button3}><a href={stockGitLink}><GitHubIcon style={{"fontSize": "4rem", "color": iconColor}}/></a></Grid>
+                <Grid item className={classes.button2}><a href={linkedInLink}><LinkedInIcon style={{"fontSize": "3.55rem", "color": iconColor}}/></a></Grid>
+                <Grid item className={classes.button3}><a href={stockGitLink}><GitHubIcon style={{"fontSize": "3rem", "color": iconColor}}/></a></Grid>
         </Grid>
           {/* <SquareCardGrid items={items}/> */}
       {/* </div> */}
