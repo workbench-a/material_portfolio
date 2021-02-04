@@ -11,6 +11,8 @@ import Select from '@material-ui/core/Select';
 import FormHelperText from "@material-ui/core/FormHelperText";
 
 import axios from 'axios';
+import Highcharts from 'highcharts/highstock';
+import HighchartsReact from 'highcharts-react-official';
 
 
 export default function MAIntro(){
@@ -44,19 +46,43 @@ export default function MAIntro(){
   const [age, setAge] = useState('');
   const [data, setData] = useState({});
   
-  useEffect(async () => {
-    const result = await axios(
-      'https://www.google.com'
-    );
- 
-    setData(result.data);
+  useEffect(()=>{
+    const fetchData = async () => {
+    const result = await axios({
+      // method: 'GET',
+      url: 'https://the-ml-api-demo.herokuapp.com/v1/predict/regression',
+    });
+    setData(result);
+    };
+    fetchData();
   },[]);
+
+  console.log("ML Api Data: ", data)
   
   const handleChange = (event) => {
     setAge(event.target.value);
   };
 
   console.log("AlphaVantage Data: ", data)
+
+  const options = {
+    title: {
+      text: 'Sentiment and Stock Price'
+    },
+      
+    series: [
+      {
+      data: [[Date.UTC(2013,5,2),0.7695],
+      [Date.UTC(2013,5,3),0.7648],
+      [Date.UTC(2013,5,24),0.7623],]
+    },
+    {
+      data: [[Date.UTC(2013,5,2),0.543],
+      [Date.UTC(2013,5,3),0.753548],
+      [Date.UTC(2013,5,24),0.7654353],]
+    }
+  ]
+  }
 
   return(
     <>
@@ -98,11 +124,22 @@ export default function MAIntro(){
           <Button className={classes.button} variant="outlined" style={{"borderColor": "black"}}>Submit</Button>
         </Grid>
         </Grid>
-        <Grid container spacing={4} direction="row" align="center" justify="center">
+
+        {/* <Grid container spacing={4} direction="row" align="center" justify="center">
           <Grid item>
             <a href="https://placeholder.com">
               <img src="https://via.placeholder.com/800x300"/>
             </a>
+          </Grid>
+        </Grid> */}
+
+        <Grid container spacing={4} direction="row" align="center" justify="center">
+          <Grid item>
+            <HighchartsReact
+              highcharts={Highcharts}
+              constructorType={'stockChart'}
+              options={options}
+            />
           </Grid>
         </Grid>
 

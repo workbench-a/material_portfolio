@@ -12,7 +12,7 @@ import SquareCardGrid from './ui/cards/SquareCardGrid';
 // header imports
 import Typography from "@material-ui/core/Typography";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import profile from '../assets/img/wallstreetbets.jpeg';
+import profile from '../assets/img/wallstreetbets_large.jpg';
 import TabDash from './ui/partials/TabDash';
 
 // card grid imports
@@ -83,19 +83,20 @@ const useStyles = makeStyles(theme => ({
   },
   tabRoot: {
       flexGrow: 1,
-      marginTop: "30rem",
+      marginTop: "35rem",
       marginBottom: "2rem",
       border: 0,
       // backgroundColor: "purple"
   },
   image: {
     marginBottom: "0.5rem",
-    maxHeight: "20rem",
+    maxHeight: "30rem",
     width: "auto",
     height: "auto",
   },
   buttonContainer2: {
-    marginBottom: "1rem",
+    marginTop: "4rem",
+    marginBottom: "8rem",
   },
   button2: {
     marginRight: "2rem",
@@ -157,10 +158,7 @@ export default function MarketAnalysis() {
                 The Machine Learning and Software Bootcamp
               </Typography> */}
               <img className={classes.image} src={profile} alt="Profile Pic"></img>
-              <Grid className={classes.buttonContainer2} container item direction="row" align="center" justify="center">
-                <Grid item className={classes.button2}><a href={linkedInLink}><LinkedInIcon fontSize="large" style={{"color": iconColor, "fontSize": "2.6rem"}}/></a></Grid>
-                <Grid item className={classes.button3}><a href={stockGitLink}><GitHubIcon fontSize="large" style={{"color": iconColor}}/></a></Grid>
-              </Grid>
+
               <Typography gutterBottom variant="h6" component="h2">
                 Sentiment and Stock Price
               </Typography>
@@ -188,6 +186,10 @@ export default function MarketAnalysis() {
         <View value={value} items={items}/>
         {/* <div>{value}</div> */}
         </Box>
+        <Grid className={classes.buttonContainer2} container item direction="row" align="center" justify="center">
+                <Grid item className={classes.button2}><a href={linkedInLink}><LinkedInIcon style={{"fontSize": "4.55rem", "color": iconColor}}/></a></Grid>
+                <Grid item className={classes.button3}><a href={stockGitLink}><GitHubIcon style={{"fontSize": "4rem", "color": iconColor}}/></a></Grid>
+        </Grid>
           {/* <SquareCardGrid items={items}/> */}
       {/* </div> */}
       </div>

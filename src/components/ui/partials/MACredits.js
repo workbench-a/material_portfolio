@@ -1,11 +1,8 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { useTheme } from "@material-ui/core/styles";
 import Grid from '@material-ui/core/Grid';
-
-
-import Highcharts from 'highcharts/highstock';
-import HighchartsReact from 'highcharts-react-official';
+import axios from 'axios';
 
 
 export default function MAIntro(){
@@ -22,27 +19,7 @@ export default function MAIntro(){
       // },
     }
   }))
-
   const classes = useStyles();
-
-  const options = {
-    title: {
-      text: 'Sentiment and Stock Price'
-    },
-      
-    series: [
-      {
-      data: [[Date.UTC(2013,5,2),0.7695],
-      [Date.UTC(2013,5,3),0.7648],
-      [Date.UTC(2013,5,24),0.7623],]
-    },
-    {
-      data: [[Date.UTC(2013,5,2),0.543],
-      [Date.UTC(2013,5,3),0.753548],
-      [Date.UTC(2013,5,24),0.7654353],]
-    }
-  ]
-  }
 
   return(
     <>
@@ -68,16 +45,6 @@ export default function MAIntro(){
         <Grid container spacing={4} direction="row" align="center" justify="flex-start">
           <Grid item>
             <h2>Feature Engineering:</h2>
-          </Grid>
-        </Grid>
-
-        <Grid container spacing={4} direction="row" align="center" justify="flex-start">
-          <Grid item>
-            <HighchartsReact
-              highcharts={Highcharts}
-              constructorType={'stockChart'}
-              options={options}
-            />
           </Grid>
         </Grid>
 

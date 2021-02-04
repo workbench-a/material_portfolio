@@ -35,7 +35,7 @@ export default function MAIntro(){
             <h1>Application Architecture:</h1>
           </Grid>
         </Grid>
-        <Grid container spacing={4} direction="row" align="center" justify="flex-start">
+        <Grid container spacing={4} direction="row" align="center" justify="center">
           <Grid item>
             <a href="https://placeholder.com">
               <img src="https://via.placeholder.com/800x300"/>
@@ -49,7 +49,7 @@ export default function MAIntro(){
           </Grid>
         </Grid>
 
-        <Grid container spacing={4} direction="row" align="center" justify="flex-start">
+        <Grid container spacing={4} direction="row" align="center" justify="center">
           <Grid item>
             <a href="https://placeholder.com">
               <img src="https://via.placeholder.com/800x300"/>
@@ -83,7 +83,7 @@ export default function MAIntro(){
             <h1>API Deployment (CircleCI, AWS, Docker, EKS)</h1>
           </Grid>
         </Grid>
-        <Grid container spacing={4} direction="row" align="center" justify="flex-start">
+        <Grid container spacing={4} direction="row" align="center" justify="center">
           <Grid item>
             <a href="https://placeholder.com">
               <img src="https://via.placeholder.com/800x300"/>
