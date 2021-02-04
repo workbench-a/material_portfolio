@@ -22,6 +22,16 @@ import SquareCard from './ui/cards/SquareCard';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+
+import { linkedInLink, stockGitLink } from "./ui/Globals";
+
+// Views
+import MAIntro from './ui/partials/MAIntro';
+import MADash from './ui/partials/MADash';
+import MACredits from './ui/partials/MACredits';
+
 const useStyles = makeStyles(theme => ({
   root: {
     minHeight: "100vh",
@@ -73,21 +83,30 @@ const useStyles = makeStyles(theme => ({
   },
   tabRoot: {
       flexGrow: 1,
-      marginTop: "25rem",
+      marginTop: "30rem",
       marginBottom: "2rem",
       border: 0,
       // backgroundColor: "purple"
   },
   image: {
-    marginBottom: "0.8rem",
+    marginBottom: "0.5rem",
     maxHeight: "20rem",
     width: "auto",
     height: "auto",
-  }
+  },
+  buttonContainer2: {
+    marginBottom: "1rem",
+  },
+  button2: {
+    marginRight: "2rem",
+    marginTop: "0",
+  },
+  button3: {
+    marginTop: "0.16rem",
+  },
 }))
 
 export default function MarketAnalysis() {
-  // const [index, setIndex] = useState(0)
   const classes = useStyles();
   const theme = useTheme();
 
@@ -102,7 +121,7 @@ export default function MarketAnalysis() {
   // console.log(theme.palette.common.black)
   // const bgColor = props.bgColor;
   const bgColor = theme.palette.common.white
-
+  const iconColor = bgColor==="#000" ? theme.palette.common.white : theme.palette.common.black;
 
   const items = [
     {
@@ -138,8 +157,12 @@ export default function MarketAnalysis() {
                 The Machine Learning and Software Bootcamp
               </Typography> */}
               <img className={classes.image} src={profile} alt="Profile Pic"></img>
+              <Grid className={classes.buttonContainer2} container item direction="row" align="center" justify="center">
+                <Grid item className={classes.button2}><a href={linkedInLink}><LinkedInIcon fontSize="large" style={{"color": iconColor, "fontSize": "2.6rem"}}/></a></Grid>
+                <Grid item className={classes.button3}><a href={stockGitLink}><GitHubIcon fontSize="large" style={{"color": iconColor}}/></a></Grid>
+              </Grid>
               <Typography gutterBottom variant="h6" component="h2">
-                On the subject of Sentiment and Stock Price
+                Sentiment and Stock Price
               </Typography>
               <Typography Wrap variant="body2" color="textPrimary" component="p" justifyContent="center">
               </Typography>
@@ -155,10 +178,9 @@ export default function MarketAnalysis() {
           textColor="black"
           centered
         >
-          <Tab label="Coursework" />
-          <Tab label="Software" />
-          <Tab label="Exploratorials" />
-          <Tab label="Resources" />
+          <Tab label="Pipeline and Analysis" />
+          <Tab label="Live Dashboard" />
+          <Tab label="Credits" />
         </Tabs>
         </div>
       {/* <div className={classes.spacerTop}/> */}
@@ -186,42 +208,24 @@ const View = ({ value, items }) => {
       // },
     }
   }))
+
   const classes = useStyles();
 
     switch(value){
       case 0:
         // view
         return(
-          <Grid
-          className={classes.gridContainer}
-          container
-          direction="row"
-          justify="center"
-          align="center"
-          spacing={4}
-        >        {/* <Box className={classes.root} display="flex" justifyContent="center" alignItems="center"> */}
-                <Grid item>
-                  <SquareCard key={items[1]} item={items[1]}/>
-                </Grid>
-                <Grid item>
-                  <SquareCard key={items[1]} item={items[1]}/>
-                </Grid>
-        </Grid>
+          <MAIntro/>
         )
       case 1:
         return(
           // view
-          <div>2</div>
+          <MADash/>
         )
       case 2:
         return(
           // view
-          <div>3</div>
-        )
-      case 3:
-        return(
-        // view
-        <div>4</div>
+          <MACredits/>
         )
     }
 }
