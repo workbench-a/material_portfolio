@@ -76,10 +76,10 @@ function Home() {
       description: "Resources and projects documenting extensive self-study in machine learning and software engineering.",
       imgUrl: "https://firebasestorage.googleapis.com/v0/b/portfolio-b992f.appspot.com/o/chalkboard_lg.jpg?alt=media&token=859ceed0-4e09-4277-ac2b-e046b0a75029",
       // detailsLink: "/research",
-      detailsLink: "https://www.github.com/AlephTaw/the-open-data-science-bootcamp",
+      detailsLink: "https://alephtaw.github.io/",
       gitHubUrl: "https://www.github.com/AlephTaw/the-open-data-science-bootcamp",
-      buttonText: "View On GitHub",
-      gitHubDisplay: false,
+      buttonText: "Notebook Blog",
+      gitHubDisplay: true,
     }
   ]
 
