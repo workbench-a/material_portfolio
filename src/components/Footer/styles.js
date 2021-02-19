@@ -1,16 +1,13 @@
-export default makeStyles(theme => ({
+import { makeStyles } from "@material-ui/core/styles";
+
+export default makeStyles((theme) => ({
   gridContainer: {
     maxWidth: "50rem",
     minWidth: "20rem",
-    backgroundColor: "red",
     margin: 0,
     padding: 20,
-    [theme.breakpoints.down("xs")]: {
-      backgroundColor: "blue",
-    },
   },
   gridItemContainer:{
-    backgroundColor: "brown",
     padding: 0,
     margin: 0
   },
@@ -23,12 +20,19 @@ export default makeStyles(theme => ({
     borderRadius: 0,
   },
   section: {
-    backgroundColor: "black",
-    height: "30rem",
+    backgroundColor: theme.palette.primary.main,
+    height: "5rem",
   },
   image: {
     backgroundColor: "blue",
     margin: 0,
     padding: 0,
+  },
+  footerText: {
+    color: theme.palette.common.white,
+  },
+  icons: {
+    color: theme.palette.common.white,
+    marginLeft: '1rem',
   }
-}))
+}));

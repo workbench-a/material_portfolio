@@ -7,15 +7,10 @@ export default makeStyles((theme) => ({
   gridContainer: {
     maxWidth: "50rem",
     minWidth: "20rem",
-    // backgroundColor: "red", //troubleshooting
     margin: 0,
     padding: 5,
-    // [theme.breakpoints.down("xs")]: {
-    //   backgroundColor: "blue",
-    // },
   },
   gridItemContainer: {
-    // backgroundColor: "brown", //troubleshooting
     padding: 0,
     margin: 0,
   },
@@ -26,11 +21,6 @@ export default makeStyles((theme) => ({
     padding: theme.spacing(0),
     color: theme.palette.text.secondary,
     borderRadius: 0,
-    // backgroundColor: "blue"
-  },
-  section: {
-    // backgroundColor: "black",
-    // height: "25rem",
   },
   spacerBot: {
     flexGrow: 1,
