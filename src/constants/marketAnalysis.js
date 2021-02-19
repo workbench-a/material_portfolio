@@ -1,0 +1,1 @@
+export const stockGitLink = "https://github.com/workbench-a/market-analysis-api";
