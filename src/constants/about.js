@@ -5,7 +5,7 @@ export const aboutPageItems = [
     imgUrl: "https://firebasestorage.googleapis.com/v0/b/portfolio-b992f.appspot.com/o/montage_lg.jpg?alt=media&token=9aba98de-059c-4aec-9fb1-8dd438202cf7",
   },
 ]
-export const cvLink = "https://firebasestorage.googleapis.com/v0/b/portfolio-b992f.appspot.com/o/Steven_Wilcox_CV_Data_Scientist_One_Page_Web.pdf?alt=media&token=7531b2c9-f5ed-4764-bd8c-97b7c61e4427";
+export const cvLink = "https://firebasestorage.googleapis.com/v0/b/portfolio-b992f.appspot.com/o/Steven_Wilcox_CV_Machine_Learning_Engineer_Expanded_Min_Public.pdf?alt=media&token=59b19df7-a77b-479a-8b3f-401d54c64812";
 export const wikiLink = "https://github.com/AlephTaw/the-open-data-science-bootcamp/wiki";
 export const calendarLink = "https://calendar.google.com/calendar/embed?src=cn87olkrll6lgkl9k97a30q2m8%40group.calendar.google.com&ctz=America%2FNew_York";
 export const bootcampLink = "https://github.com/AlephTaw/the-open-data-science-bootcamp";
